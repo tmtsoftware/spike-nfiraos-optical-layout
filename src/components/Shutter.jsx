@@ -1,4 +1,5 @@
 import React from "react";
+import './Shuter.css'
 
 export class Shutter extends React.Component {
     render() {

@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 121 500" width="120" height="500">
-    <path fill="#00feff"
-          d="m20,0
-           v500
-           h100
-           v-500
-           Z"
-          stroke="black"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-dasharray="8.0"
-          stroke-width="2"/>
+     xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" width="100" height="100">
 
-    <path d="m0 150 v50"
-          stroke="red"
-          stroke-width="10"/>
-
-    <path d="m0 300 v50"
-          stroke="red"
-          stroke-width="10"/>
 </svg>
