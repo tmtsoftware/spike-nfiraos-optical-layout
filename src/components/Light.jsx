@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+import {Shutter} from "./Shutter";
 
 export class Light extends React.Component{
     render(){
@@ -29,3 +31,7 @@ export class Light extends React.Component{
         </svg>
     }
 }
+
+Light.propTypes = {
+    blocked : PropTypes.bool.isRequired
+};

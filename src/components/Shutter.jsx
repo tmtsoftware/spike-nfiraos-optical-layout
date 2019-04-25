@@ -1,5 +1,6 @@
 import React from "react";
 import './Shuter.css'
+import PropTypes from "prop-types";
 
 export class Shutter extends React.Component {
     render() {
@@ -18,3 +19,7 @@ export class Shutter extends React.Component {
         </svg>
     }
 }
+
+Shutter.propTypes = {
+    open : PropTypes.bool.isRequired
+};

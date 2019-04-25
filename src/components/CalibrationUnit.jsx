@@ -1,45 +1,41 @@
 import React from "react";
-import {Shutter} from "./Shutter";
-import {Light} from "./Light";
+import {Text} from "./Text";
 
 export class CalibrationUnit extends React.Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            open: false
-        }
-    }
-
     render() {
-        return <div>
-            <svg viewBox="0 0 1024 600" width="1024" height="600">
-                <Shutter open={this.state.open}/>
 
-                /*CALIBRATION UNIT*/
-                <svg x={"80"}>
-                    <rect id={"calibration-unit"}
-                          fill="#00feff"
-                          stroke="black"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeDasharray="8.0"
-                          strokeWidth="2"
-                          x={"2"}
-                          y={"2"}
-                          width={"100"}
-                          height={"500"}
-                    />
-                </svg>
+        const width = 150;
+        const strokeWidth = 2;
+        const height = 500;
 
-                <Light blocked={!this.state.open} />
-            </svg>
+        return <svg x={"80"}>
+            <rect id={"calibration-unit"}
+                  fill="#00feff"
+                  stroke="black"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeDasharray="8.0"
+                  strokeWidth={strokeWidth}
+                  x={"2"}
+                  y={"2"}
+                  width={width}
+                  height={height}
+            />
 
-            <div>
-                <button onClick={() => this.setState({open: !this.state.open})}>
-                    {this.state.open === true ? "Close" : "Open"}
-                </button>
-            </div>
-        </div>
+            <Text x={width * 0.1 + strokeWidth} y={height * 0.03} width={width * 0.8} height={height * 0.2}>
+                NFIRAOS Science Calibration Unit
+            </Text>
+
+            <rect
+                fill="#0433FF"
+                stroke="black"
+                strokeWidth="1"
+                height={height * 0.1}
+                width={width * 0.8}
+                x={width * 0.1 + strokeWidth}
+                y={height * 0.18}
+            />
+        </svg>
     }
 }
