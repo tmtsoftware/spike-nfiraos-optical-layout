@@ -1,14 +1,17 @@
 import React from "react";
 import {TextBox} from "./TextBox";
 import {DashBox} from "./DashBox";
+import {Mirror} from "./Mirror";
+import PropTypes from "prop-types";
 
 export class CalibrationUnit extends React.Component {
 
     render() {
-
         const width = 150;
         const strokeWidth = 2;
         const height = 500;
+
+        const mirrorMidY = this.props.up ? height/2 : height/2 + height/6
 
         return <svg x={"80"}>
             <DashBox backgroundColor="#00feff" x={2} y={2} width={width} height={height}>
@@ -23,7 +26,12 @@ export class CalibrationUnit extends React.Component {
                          backgroundColor="#0433FF">
                     NSCU arcs & flats
                 </TextBox>
+                <Mirror midX={width/2} midY={mirrorMidY} />
             </DashBox>
         </svg>
     }
+}
+
+CalibrationUnit.propTypes = {
+    up : PropTypes.bool
 }
