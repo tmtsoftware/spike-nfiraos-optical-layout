@@ -34,5 +34,5 @@ TextBox.propTypes = {
     height: PropTypes.number.isRequired,
     color: PropTypes.string,
     backgroundColor: PropTypes.string,
-    children: PropTypes.string.isRequired
+    children: PropTypes.string
 };
