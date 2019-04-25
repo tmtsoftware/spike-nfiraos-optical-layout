@@ -1,5 +1,5 @@
 import React from "react";
-import {Text} from "./Text";
+import {TextBox} from "./TextBox";
 
 export class CalibrationUnit extends React.Component {
 
@@ -23,19 +23,19 @@ export class CalibrationUnit extends React.Component {
                   height={height}
             />
 
-            <Text x={width * 0.1 + strokeWidth} y={height * 0.03} width={width * 0.8} height={height * 0.2}>
+            <TextBox x={width * 0.1 + strokeWidth} y={height * 0.03} width={width * 0.8} height={height * 0.12}>
                 NFIRAOS Science Calibration Unit
-            </Text>
+            </TextBox>
 
-            <rect
-                fill="#0433FF"
-                stroke="black"
-                strokeWidth="1"
-                height={height * 0.1}
-                width={width * 0.8}
-                x={width * 0.1 + strokeWidth}
-                y={height * 0.18}
-            />
+            <TextBox width={width * 0.8}
+                     height= {height * 0.12}
+                     y={height * 0.18}
+                     x={width * 0.1 + strokeWidth}
+                     color="white"
+                     backgroundColor="#0433FF">
+                NSCU arcs & flats
+            </TextBox>
+
         </svg>
     }
 }
